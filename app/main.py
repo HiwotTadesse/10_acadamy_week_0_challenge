@@ -12,7 +12,7 @@ selected_option = st.selectbox(
     options= utils.get_list_of_csvs()
 )
 
-df = utils.fetch_data(f'{selected_option}')
+df = utils.fetch_data(f'./data/{selected_option}')
 
 st.title("Data Visualization Dashboard")
 st.markdown("This dashboard allows you to visualize data with various interactive features.")
