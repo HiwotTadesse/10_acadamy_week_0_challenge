@@ -11,7 +11,9 @@ def fetch_data(file_name):
     return data
 
 def get_list_of_csvs():
-   return os.listdir("../data")
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(current_dir, "../data")
+    return os.listdir(data_dir)
 
 def clean_data(data):
     data = data.replace([np.inf, -np.inf], np.nan)
